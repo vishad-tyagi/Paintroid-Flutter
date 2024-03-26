@@ -25,7 +25,7 @@ jobs:
         run: melos run test:widget
       - name: Prepare App Name and Identifier
         run: |
-          chmod +x ./update_app_identifiers.sh
+          chmod +x ./.github/workflows/update_app_identifiers.sh
           ./.github/workflows/update_app_identifiers.sh ${{ github.event.number }}
       - name: Build release package
         run: |
