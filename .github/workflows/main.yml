@@ -26,7 +26,7 @@ jobs:
       - name: Prepare App Name and Identifier
         run: |
           chmod +x ./update_app_identifiers.sh
-          ./update_app_identifiers.sh ${{ github.event.number }}
+          ./.github/workflows/update_app_identifiers.sh ${{ github.event.number }}
       - name: Build release package
         run: |
           flutter build apk --release
